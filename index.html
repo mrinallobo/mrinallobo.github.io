@@ -240,42 +240,8 @@
   .cta h2 { margin: 12px auto 18px; }
   .cta p { color: var(--muted); max-width: 520px; margin: 0 auto 30px; }
   .cta .btns { justify-content: center; }
-  footer { padding: 34px 0 48px; font-size: 14px; }
+  footer { padding: 34px 0 48px; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-
-  /* Scroll-driven sunset */
-  .sunset { position: relative; height: 240vh; height: 240svh; margin-top: 90px; --p: 0; background: #0b0b0d; }
-  .sky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
-  .sky > * { position: absolute; }
-  .sky .day { inset: 0; background: linear-gradient(to bottom, #9fc9d6 0%, #f3dcae 52%, #ffb066 78%, #ff9a4d 100%); }
-  .sky .dusk { inset: 0; background: linear-gradient(to bottom, #2a1b3d 0%, #8a3324 44%, #ff6a1a 76%, #ffa24a 100%); opacity: calc(var(--p) * 2.4); }
-  .sky .night { inset: 0; background: linear-gradient(to bottom, #050508 0%, #0b0b0d 55%, #1c0f06 100%); opacity: calc((var(--p) - 0.5) * 2.3); }
-  .sky .stars { inset: 0 0 35% 0; opacity: calc((var(--p) - 0.62) * 3); background-repeat: repeat; background-size: 340px 260px;
-    background-image:
-      radial-gradient(1.4px 1.4px at 20px 30px, #fff 50%, transparent 51%), radial-gradient(1px 1px at 90px 120px, #ffe9cf 50%, transparent 51%),
-      radial-gradient(1.6px 1.6px at 160px 60px, #fff 50%, transparent 51%), radial-gradient(1px 1px at 230px 190px, #fff 50%, transparent 51%),
-      radial-gradient(1.2px 1.2px at 300px 90px, #ffd9b0 50%, transparent 51%), radial-gradient(1px 1px at 60px 220px, #fff 50%, transparent 51%),
-      radial-gradient(1.3px 1.3px at 270px 20px, #fff 50%, transparent 51%), radial-gradient(1px 1px at 130px 170px, #ffe9cf 50%, transparent 51%);
-    animation: twinkle 4s ease-in-out infinite alternate; }
-  @keyframes twinkle { to { filter: brightness(0.6); } }
-  .sky .sun { left: 50%; top: 22%; width: 46vmin; height: 46vmin; border-radius: 50%; will-change: transform;
-    transform: translate3d(-50%, calc(var(--p) * 78vh), 0);
-    background: radial-gradient(circle, #fff6d8 0%, #ffe2a0 22%, #ffb347 46%, rgba(255, 122, 26, 0.55) 60%, rgba(255, 106, 26, 0) 72%); }
-  .sky .moon { right: 16%; top: 15%; width: 9vmin; height: 9vmin; border-radius: 50%; opacity: calc((var(--p) - 0.7) * 4);
-    transform: translate3d(0, calc((1 - var(--p)) * 60px), 0);
-    background: radial-gradient(circle at 38% 36%, #faf5ec 0%, #e9e0cd 55%, #cfc4ab 100%); box-shadow: 0 0 34px 10px rgba(246, 241, 232, 0.2); }
-  .sky .cloud { height: 7vmin; border-radius: 50%; background: radial-gradient(rgba(255, 243, 217, 0.5) 0%, rgba(255, 255, 255, 0) 72%);
-    opacity: calc(1 - var(--p) * 1.3); animation: floaty 36s ease-in-out infinite alternate; }
-  @keyframes floaty { to { transform: translateX(7vw); } }
-  .sky .hills { left: 0; right: 0; bottom: -1px; width: 100%; height: 42%; }
-  .sky .hills .far { fill: #3a1d10; opacity: 0.85; }
-  .sky .hills .near { fill: #0b0b0d; }
-  .sky .closing { left: 0; right: 0; bottom: 13%; text-align: center; padding: 0 20px; color: #f4f1ec;
-    opacity: calc((var(--p) - 0.74) * 4.5); transform: translate3d(0, calc((1 - var(--p)) * 50px), 0); }
-  .sky .closing b { display: block; font-size: clamp(30px, 6vw, 68px); line-height: 1.05; letter-spacing: -0.035em; }
-  .sky .closing b span { color: #ff6a1a; }
-  .sky .closing small { display: block; margin-top: 12px; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #9c978f; }
-  footer { background: #0b0b0d; color: #9c978f; }
 
   /* Scroll reveal */
   .js .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
@@ -519,25 +485,6 @@ platform   True    ~60 services reconciled
 
 </main>
 
-<div class="sunset" id="sunset" aria-hidden="true">
-  <div class="sky">
-    <div class="day"></div>
-    <div class="dusk"></div>
-    <div class="night"></div>
-    <div class="stars"></div>
-    <div class="moon"></div>
-    <div class="cloud" style="left: 6%; top: 12%; width: 36vmin;"></div>
-    <div class="cloud" style="left: 52%; top: 7%; width: 44vmin; animation-duration: 46s;"></div>
-    <div class="cloud" style="left: 70%; top: 24%; width: 30vmin; animation-duration: 30s;"></div>
-    <div class="sun"></div>
-    <svg class="hills" viewBox="0 0 1440 400" preserveAspectRatio="none">
-      <path class="far" d="M0 210 C 180 120 330 150 520 200 S 860 110 1060 170 S 1340 130 1440 180 V400 H0 Z"/>
-      <path class="near" d="M0 300 C 220 220 420 280 640 290 S 1000 210 1180 270 S 1380 250 1440 280 V400 H0 Z"/>
-    </svg>
-    <div class="closing"><b>Shipped before sunset<span>.</span></b><small class="mono">systems green · on-call quiet</small></div>
-  </div>
-</div>
-
 <footer>
   <div class="wrap"><span>© Mrinal Lobo</span><span class="mono">Mangalore, India</span></div>
 </footer>
@@ -555,23 +502,6 @@ platform   True    ~60 services reconciled
       paint();
     });
 
-
-    // Sunset: map scroll progress through the scene to --p (0 = day, 1 = night)
-    var scene = document.getElementById('sunset');
-    if (scene) {
-      var ticking = false;
-      var update = function () {
-        ticking = false;
-        var r = scene.getBoundingClientRect();
-        var span = r.height - window.innerHeight;
-        var v = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 1;
-        scene.style.setProperty('--p', v.toFixed(4));
-      };
-      var onScroll = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll);
-      update();
-    }
 
     var items = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) {
