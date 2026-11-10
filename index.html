@@ -371,7 +371,7 @@ platform   True    ~60 services reconciled
         <li>Shipped continuously through <strong>GitOps (Flux, Helm)</strong> with rolling updates. Built CI/CD with GitHub Actions and Azure DevOps, cutting build time from <strong>30 to 5 minutes</strong>.</li>
         <li><strong>Security:</strong> hardened chiseled and Bitnami images, federated credentials so GitOps reads Azure Key Vault secrets with none in Git, and Go-based Kubernetes operators (Vault unseal), under <strong>GDPR</strong> compliance.</li>
         <li>Provisioned MainManager's Azure environments (VMs, SQL Server) with <strong>Terraform</strong> modules and Vault.</li>
-        <li>Built observability with <strong>OpenTelemetry, Prometheus, Grafana and Loki</strong>, alerting to Teams via Alertmanager. Tracked SLOs (error rate, recovery time) and handled incident response and postmortems.</li>
+        <li>Built observability with <strong>OpenTelemetry, Prometheus, Grafana and Loki</strong>, alerting to Teams via Alertmanager. Held SLOs (frontend load under 1 s, API 5xx errors under 0.01%), handled incident response and postmortems, and built Claude agents for root cause analysis.</li>
         <li>Designed and ran <strong>MestroBot</strong> in production: several GB a day of energy readings from ~140 companies, with ML models for anomaly detection (Isolation Forest), imputation and consumption forecasting.</li>
         <li>In the AI CoE team, built <strong>LLM / GenAI</strong> RAG chatbots on Amazon Bedrock and served open models with vLLM. Cost optimisation cut AWS spend by <strong>$4,000+ a month</strong> by right-sizing dev clusters and shutting down idle inference machines with EventBridge.</li>
       </ul>
