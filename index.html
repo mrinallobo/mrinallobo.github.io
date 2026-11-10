@@ -311,16 +311,18 @@ platform   <span class="ok">True</span>    ~60 services reconciled
 
     <div class="job reveal">
       <div>
-        <div class="when mono">Aug 2023 – Present</div>
+        <div class="when mono">Aug 2023 – Oct 2026</div>
         <h3>EG A/S</h3>
         <div class="role">DevOps Engineer · Mangalore, India</div>
       </div>
       <ul>
-        <li>Built and operate a multi-tenant, highly available <strong>AKS platform</strong> for Estata, a rental management product: 8 nodes, ~60 .NET microservices on Kafka, meeting a <strong>99% monthly uptime SLA</strong>.</li>
-        <li>Ship continuously through <strong>GitOps (Flux, Helm)</strong> with rolling updates. Built CI/CD with GitHub Actions and Azure DevOps, cutting build time from <strong>30 to 5 minutes</strong>.</li>
-        <li>Provisioned MainManager's AWS environments with reusable <strong>Terraform</strong> modules and Vault, and cut cloud spend by <strong>$4,000+ a month</strong>.</li>
+        <li>Built and operated a multi-tenant, highly available <strong>AKS platform</strong> for Estata, a rental management product: 8 nodes, ~60 .NET microservices on Kafka, meeting a <strong>99% monthly uptime SLA</strong>.</li>
+        <li>Shipped continuously through <strong>GitOps (Flux, Helm)</strong> with rolling updates. Built CI/CD with GitHub Actions and Azure DevOps, cutting build time from <strong>30 to 5 minutes</strong>.</li>
+        <li>Provisioned MainManager's Azure environments (virtual machines, SQL Server) with reusable <strong>Terraform</strong> modules and HashiCorp Vault, and cut cloud spend by <strong>$4,000+ a month</strong>.</li>
         <li>Built observability with <strong>OpenTelemetry, Prometheus, Grafana and Loki</strong>, alerting to Teams via Alertmanager. Handled incident response and postmortems.</li>
-        <li>Designed <strong>MestroBot</strong>, a production pipeline collecting several GB a day of energy readings from ~140 companies, with anomaly detection (scikit-learn, MLflow). In the AI CoE team, built RAG chatbots on <strong>Amazon Bedrock</strong> and ran self-hosted LLM inference with vLLM.</li>
+        <li>Designed and ran <strong>MestroBot</strong> in production: a pipeline collecting several GB a day of energy readings from ~140 companies.</li>
+        <li>Built ML models on that data: an <strong>Isolation Forest</strong> for anomaly detection, an imputation model to fill missing readings, and <strong>gradient boosting</strong> to predict energy consumption.</li>
+        <li>In the AI CoE team, built RAG chatbots on <strong>Amazon Bedrock</strong> and served open models with vLLM.</li>
       </ul>
     </div>
 
@@ -398,12 +400,12 @@ platform   <span class="ok">True</span>    ~60 services reconciled
     <h2 class="reveal">The stack <span>I work in every day.</span></h2>
 
     <div class="skills">
-      <div class="skill reveal"><h4>Cloud</h4><div class="tags"><span class="tag">Azure AKS</span><span class="tag">Key Vault</span><span class="tag">AWS EKS</span><span class="tag">ECS</span><span class="tag">EC2</span><span class="tag">RDS</span><span class="tag">Lambda</span><span class="tag">S3</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">GCP GKE</span></div></div>
+      <div class="skill reveal"><h4>Cloud</h4><div class="tags"><span class="tag">Azure AKS</span><span class="tag">Azure VMs</span><span class="tag">SQL Server</span><span class="tag">Key Vault</span><span class="tag">AWS EKS</span><span class="tag">ECS</span><span class="tag">EC2</span><span class="tag">VPC</span><span class="tag">GCP GKE</span></div></div>
       <div class="skill reveal"><h4>Containers &amp; delivery</h4><div class="tags"><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">Flux</span><span class="tag">GitOps</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span></div></div>
       <div class="skill reveal"><h4>Infrastructure as code</h4><div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">HashiCorp Vault</span><span class="tag">Git</span></div></div>
       <div class="skill reveal"><h4>Observability</h4><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span><span class="tag">Loki</span><span class="tag">Alertmanager</span><span class="tag">Elastic Stack</span></div></div>
-      <div class="skill reveal"><h4>Languages &amp; data</h4><div class="tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">SQL</span><span class="tag">Linux</span><span class="tag">PostgreSQL</span><span class="tag">Kafka</span></div></div>
-      <div class="skill reveal"><h4>AI &amp; MLOps</h4><div class="tags"><span class="tag">Amazon Bedrock</span><span class="tag">RAG</span><span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">MLflow</span><span class="tag">Kubeflow</span><span class="tag">scikit-learn</span><span class="tag">TensorFlow</span><span class="tag">Spark</span></div></div>
+      <div class="skill reveal"><h4>Languages &amp; data</h4><div class="tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">SQL</span><span class="tag">Linux</span><span class="tag">Kafka</span></div></div>
+      <div class="skill reveal"><h4>ML &amp; AI</h4><div class="tags"><span class="tag">scikit-learn</span><span class="tag">Gradient boosting</span><span class="tag">Anomaly detection</span><span class="tag">MLflow</span><span class="tag">vLLM</span><span class="tag">RAG</span><span class="tag">Amazon Bedrock</span></div></div>
     </div>
 
     <div class="creds">
@@ -432,7 +434,7 @@ platform   <span class="ok">True</span>    ~60 services reconciled
 </main>
 
 <footer>
-  <div class="wrap"><span>© Mrinal Lobo</span><span class="mono">Bangalore, India</span></div>
+  <div class="wrap"><span>© Mrinal Lobo</span><span class="mono">Mangalore, India</span></div>
 </footer>
 
 <script>
