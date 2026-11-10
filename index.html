@@ -401,13 +401,13 @@ platform   True    ~60 services reconciled
         <div class="role">DevOps Engineer · Mangalore, India</div>
       </div>
       <ul>
-        <li>Built and operated a multi-tenant, highly available <strong>AKS platform</strong> for Estata, a rental management product: 8 nodes, ~60 .NET microservices on Kafka, meeting a <strong>99% monthly uptime SLA</strong>.</li>
+        <li>Built and operated a multi-tenant, highly available <strong>AKS platform</strong> for Estata: 8 nodes, ~60 .NET microservices on Kafka, Velero backups and AWS snapshots, meeting a <strong>99% monthly uptime SLA</strong>.</li>
         <li>Shipped continuously through <strong>GitOps (Flux, Helm)</strong> with rolling updates. Built CI/CD with GitHub Actions and Azure DevOps, cutting build time from <strong>30 to 5 minutes</strong>.</li>
-        <li>Provisioned MainManager's Azure environments (virtual machines, SQL Server) with reusable <strong>Terraform</strong> modules and HashiCorp Vault.</li>
-        <li>Built observability with <strong>OpenTelemetry, Prometheus, Grafana and Loki</strong>, alerting to Teams via Alertmanager. Handled incident response and postmortems.</li>
-        <li>Designed and ran <strong>MestroBot</strong> in production: a pipeline collecting several GB a day of energy readings from ~140 companies.</li>
-        <li>Built ML models on that data: an <strong>Isolation Forest</strong> for anomaly detection, an imputation model to fill missing readings, and <strong>gradient boosting</strong> to predict energy consumption.</li>
-        <li>In the AI CoE team, built RAG chatbots on <strong>Amazon Bedrock</strong> and served open models with vLLM. Cut AWS spend by <strong>$4,000+ a month</strong> by right-sizing dev clusters and shutting down idle inference machines with EventBridge.</li>
+        <li><strong>Security:</strong> hardened chiseled and Bitnami images, federated credentials so GitOps reads Azure Key Vault secrets with none in Git, and Go-based Kubernetes operators (Vault unseal), under <strong>GDPR</strong> compliance.</li>
+        <li>Provisioned MainManager's Azure environments (VMs, SQL Server) with <strong>Terraform</strong> modules and Vault.</li>
+        <li>Built observability with <strong>OpenTelemetry, Prometheus, Grafana and Loki</strong>, alerting to Teams via Alertmanager. Tracked SLOs (error rate, recovery time) and handled incident response and postmortems.</li>
+        <li>Designed and ran <strong>MestroBot</strong> in production: several GB a day of energy readings from ~140 companies, with ML models for anomaly detection (Isolation Forest), imputation and consumption forecasting.</li>
+        <li>In the AI CoE team, built <strong>LLM / GenAI</strong> RAG chatbots on Amazon Bedrock and served open models with vLLM. Cost optimisation cut AWS spend by <strong>$4,000+ a month</strong> by right-sizing dev clusters and shutting down idle inference machines with EventBridge.</li>
       </ul>
     </div>
 
@@ -418,9 +418,9 @@ platform   True    ~60 services reconciled
         <div class="role">Python Engineer · Remote</div>
       </div>
       <ul>
-        <li>Built the backend of Woodle AI, an AI website builder, as <strong>Python microservices</strong> on OpenAI GPT APIs.</li>
-        <li>Ran its infrastructure: Docker containers on <strong>AWS (ECS, EKS)</strong>, deployed through GitHub Actions CI/CD.</li>
-        <li>Built REST APIs for a financial services backend.</li>
+        <li>Built the backend of Woodle AI, an AI website builder on OpenAI GPT APIs, as <strong>Python microservices</strong>.</li>
+        <li>Ran its <strong>AWS (ECS, EKS)</strong> infrastructure behind load balancers and WAF with Route 53 DNS, and was on call for production.</li>
+        <li>Built REST APIs for a financial services backend, deployed with Docker and GitHub Actions CI/CD.</li>
       </ul>
     </div>
 
@@ -431,8 +431,9 @@ platform   True    ~60 services reconciled
         <div class="role">Graduate Engineer Trainee · Mangalore, India</div>
       </div>
       <ul>
-        <li>Maintained and hardened on-premises <strong>Linux</strong> servers for domain-hosting platforms.</li>
-        <li>Built GitHub Actions pipelines and wrote Python and Bash automation for the hosting backend.</li>
+        <li>Maintained and hardened on-premises <strong>Linux</strong> servers for domain hosting (networking, firewalls, fail2ban).</li>
+        <li>Took part in migrating CI/CD pipelines from <strong>Jenkins to GitHub Actions</strong>.</li>
+        <li>Wrote Python and Bash services and automation for the hosting backend.</li>
       </ul>
     </div>
   </div>
@@ -486,11 +487,11 @@ platform   True    ~60 services reconciled
 
     <div class="skills">
       <div class="skill reveal"><h4>Cloud</h4><div class="tags"><span class="tag">Azure AKS</span><span class="tag">Azure VMs</span><span class="tag">SQL Server</span><span class="tag">Key Vault</span><span class="tag">AWS EKS</span><span class="tag">ECS</span><span class="tag">EC2</span><span class="tag">EventBridge</span><span class="tag">GCP GKE</span></div></div>
-      <div class="skill reveal"><h4>Containers &amp; delivery</h4><div class="tags"><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">Flux</span><span class="tag">GitOps</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span></div></div>
-      <div class="skill reveal"><h4>Infrastructure as code</h4><div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">HashiCorp Vault</span><span class="tag">Git</span></div></div>
+      <div class="skill reveal"><h4>Containers &amp; delivery</h4><div class="tags"><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">Flux</span><span class="tag">GitOps</span><span class="tag">Velero</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span></div></div>
+      <div class="skill reveal"><h4>IaC, networking &amp; security</h4><div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">HashiCorp Vault</span><span class="tag">Load balancers</span><span class="tag">WAF</span><span class="tag">Route 53</span><span class="tag">Federated credentials</span><span class="tag">GDPR</span></div></div>
       <div class="skill reveal"><h4>Observability</h4><div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span><span class="tag">Loki</span><span class="tag">Alertmanager</span><span class="tag">Elastic Stack</span></div></div>
       <div class="skill reveal"><h4>Languages &amp; data</h4><div class="tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">SQL</span><span class="tag">Linux</span><span class="tag">Kafka</span></div></div>
-      <div class="skill reveal"><h4>ML &amp; AI</h4><div class="tags"><span class="tag">scikit-learn</span><span class="tag">MLflow</span><span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">Amazon Bedrock</span></div></div>
+      <div class="skill reveal"><h4>ML &amp; GenAI</h4><div class="tags"><span class="tag">scikit-learn</span><span class="tag">MLflow</span><span class="tag">LLMs</span><span class="tag">vLLM</span><span class="tag">Ollama</span><span class="tag">RAG</span><span class="tag">Amazon Bedrock</span></div></div>
     </div>
 
     <div class="creds">
